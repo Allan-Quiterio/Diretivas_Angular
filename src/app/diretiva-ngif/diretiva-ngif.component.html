@@ -1,0 +1,27 @@
+<h4>*ngIf</h4>
+
+<div *ngIf="cursos.length > 0">
+  <p>Lista de cursos aqui</p>
+</div>
+<!-- Nesse caso, essa div funciona como um else -->
+<div *ngIf="cursos.length == 0">
+  <p>Não existem cursos para serem listados</p>
+</div>
+
+<div *ngIf="mostrarCurso">
+  <p>Lista de cursos aqui</p>
+</div>
+<div *ngIf="!mostrarCurso">
+  <p>Não existem cursos para serem listados</p>
+</div>
+
+<button (click)="onMostrarCursos()">Mostrar/Esconder curso</button>
+
+<h4>Hidden como alternativa</h4>
+
+<div [hidden]="!mostrarCurso">
+  <p>Lista de cursos aqui</p>
+</div>
+<div [hidden]="mostrarCurso">
+  <p>Não existem cursos para serem listados</p>
+</div>
