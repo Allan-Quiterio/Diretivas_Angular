@@ -25,3 +25,14 @@
 <div [hidden]="mostrarCurso">
   <p>Não existem cursos para serem listados</p>
 </div>
+
+<h4>Removendo o * e usando ng-template</h4>
+
+<div *ngIf="mostrarCurso">
+  <p>Lista de cursos aqui</p>
+</div>
+
+<!-- Por baixo dos panos o Angular transforma o *ngIf nisso:-->
+<ng-template [ngIf]="mostrarCurso">
+  <div>Lista de cursos aqui</div>
+</ng-template>

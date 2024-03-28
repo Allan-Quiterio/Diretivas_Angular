@@ -33,3 +33,19 @@
   <p *ngSwitchCase="'lista'">Modo Lista ativado</p>
   <p *ngSwitchDefault>Modo Home ativado</p>
 </div>
+
+<h4>Removendo o * e usando ng-template</h4>
+
+<!-- Uma outra maneira mais robusta de fazer a execução à cima, utilizando o ng-template -->
+<div class="container" [ngSwitch]="aba">
+  <ng-template [ngSwitchCase]="'mapa'">
+    <p>Modo Mapa ativado</p>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'lista'">
+    <p>Modo Lista ativado</p>
+  </ng-template>
+  <!-- Nesse caso, estamos usando o switch case para o home e definindo na mesma tag que ele é o padrão ngSwitchDefault -->
+  <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+    <p>Modo Home ativado</p>
+  </ng-template>
+</div>
