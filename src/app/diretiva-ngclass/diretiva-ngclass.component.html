@@ -1,0 +1,21 @@
+<!-- Essa é a forma utilizando o class binding [class. ...] -->
+<h1>
+  <i
+    class="bi"
+    [class.bi-star]="!meuFavorito"
+    [class.bi-star-fill]="meuFavorito"
+    (click)="onClick()"
+  ></i>
+</h1>
+
+<!-- Utilizando o ngClass, é uma forma diferente de escrever com o class binding, pode ser útil quando tiver muitas classes -->
+<h1>
+  <i
+    class="bi"
+    [ngClass]="{
+      'bi-star': !meuFavorito,
+      'bi-star-fill': meuFavorito
+    }"
+    (click)="onClick()"
+  ></i>
+</h1>
