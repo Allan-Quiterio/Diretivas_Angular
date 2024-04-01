@@ -1,0 +1,13 @@
+<p>Descrição: {{ tarefa.desc }}</p>
+
+<!-- Forma mais longa de checar, através do ternário -->
+<p>
+  Responsável:
+  {{ tarefa.responsavel !== null ? tarefa.responsavel.nome : "" }}
+</p>
+
+<!-- Utilizando o elvis operator para checar antes de settar se a propriedade é null ou não -->
+<p>
+  Responsável:
+  {{ tarefa.responsavel?.nome }}
+</p>
