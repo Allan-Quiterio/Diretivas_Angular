@@ -3,4 +3,18 @@
 <!-- <app-diretiva-ngfor></app-diretiva-ngfor> -->
 <!-- <app-diretiva-ngclass></app-diretiva-ngclass> -->
 <!-- <app-diretiva-ngstyle></app-diretiva-ngstyle> -->
-<app-operador-elvis></app-operador-elvis>
+<!-- <app-operador-elvis></app-operador-elvis> -->
+<app-exemplo-ng-content>
+  <!-- O que for passado aqui dentro, será renderizado no espaço lá do Template: <ng-conten></ng-conten> -->
+  Conteúdo passado para o componente.
+  <!-- É possível passar também outros componentes para serem renderizados -->
+  <app-operador-elvis></app-operador-elvis>
+</app-exemplo-ng-content>
+
+<!-- Utilizando seletores para posicionar no local exato do ng-content -->
+<app-exemplo-ng-content>
+  <div class="titulo">Título do Card</div>
+  <!-- Se tiver 2 conteúdos com o mesmo seletor, ele concatena tudo no lugar adequado -->
+  <div class="corpo">Conteúdo passado para o componente.</div>
+  <div class="corpo">Conteúdo passado para o componente 2.</div>
+</app-exemplo-ng-content>
