@@ -5,4 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './diretivas-customizadas.component.html',
   styleUrls: ['./diretivas-customizadas.component.scss'],
 })
-export class DiretivasCustomizadasComponent {}
+export class DiretivasCustomizadasComponent {
+  mostrarCurso = false;
+
+  onMostrarCursos() {
+    this.mostrarCurso = !this.mostrarCurso;
+  }
+}

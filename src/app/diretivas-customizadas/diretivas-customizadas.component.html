@@ -8,3 +8,13 @@
 <p [highlight]="'red'" [defaultColor]="'grey'">
   Texto com highlight com cores customizadas
 </p>
+
+<div *ngIf="mostrarCurso">
+  <p>Lista de cursos aqui</p>
+</div>
+<!-- Chamando a diretiva ng-else que foi criada na mão -->
+<div *ngElse="mostrarCurso">
+  <p>Não existem cursos para serem listados</p>
+</div>
+
+<button (click)="onMostrarCursos()">Mostrar/Esconder curso</button>
